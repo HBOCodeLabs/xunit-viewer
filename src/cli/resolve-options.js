@@ -39,6 +39,7 @@ const extractTerminal = (terminal = false) => {
 }
 
 const extractPort = (port = false) => {
+  if (typeof port === 'string') port = parseInt(port, 10)
   if (typeof port !== 'boolean' && typeof port !== 'number') return false
   return port
 }
